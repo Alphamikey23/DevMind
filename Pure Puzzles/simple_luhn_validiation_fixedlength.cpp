@@ -13,12 +13,14 @@ int doubleDigitValue(int digit) {
 int main() {
     char digit;
     int checksum = 0;
-    cout<<"Enter a six digit number \n";
-    for(int position = 1; position <=6; position++){
-        cin>>digit;
-        if( position % 2 == 0) checksum += digit - 48;
-        else checksum += doubledDigitValue(digit-48);
-        
+    int position = 1;
+    cout<<"Enter a number with an even number of digits \n";
+    digit = cin.get();
+    while (digit != 10 ){
+        if (position % 2 == 0 ) checksum += digit - 48;
+        else checksum += doubleDigitValue(digit-48);
+        digit = cin.get();
+        position++;
     }
     cout<<"checksum is "<<checksum<<". \n";
     if(checksum % 10 == 0) {
