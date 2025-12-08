@@ -7,7 +7,6 @@ int main() {
         for (int j=9; j>=abs(i * -2); j--) {
             cout<<"#";
         }
-        cout<<"         ";
         cout<<"\n";
     }
 }
